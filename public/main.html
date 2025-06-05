@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Main | usablemusic</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #00ffcc;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #ccc;
+      margin-bottom: 2em;
+    }
+
+    .btn {
+      padding: 1em 2em;
+      background: #00ffcc;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #00ccaa;
+    }
+
+    #loading {
+      display: none;
+      font-size: 1.5em;
+      color: #00ffcc;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Make a Project</h1>
+  <p>This is a  music maker. Click below to start your first project.</p>
+  <button class="btn" onclick="startProject()">Make a Project</button>
+  <div id="loading">Project loading...</div>
+
+  <script>
+    function startProject() {
+      document.querySelector('.btn').style.display = 'none';
+      document.getElementById('loading').style.display = 'block';
+
+      setTimeout(() => {
+        window.location.href = 'project_maker1.html';
+      }, 2000); // waits 2 seconds
+    }
+  </script>
+</body>
+</html>
 
